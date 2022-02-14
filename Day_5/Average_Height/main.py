@@ -10,4 +10,4 @@ for height in students_heights:
     sum += height
     counter += 1
 
-print(round(sum / counter))
+print(round(sum / len(students_heights)))
