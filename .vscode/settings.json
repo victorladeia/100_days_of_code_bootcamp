@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Day_7/Hangman-5"
+    ]
+}
