@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./Day_7/Hangman-5"
+        "./Day_7/Hangman-5",
+        "./Day_8/Ceaser_Cipher/Version3"
     ]
 }
