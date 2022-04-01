@@ -26,6 +26,29 @@ empty_dictionary = {}
 
 # Loop through a dictionary
 
-for key in programming_dictionary:
-    print(key)
-    print(programming_dictionary[key])
+# for key in programming_dictionary:
+#    print(key)
+#    print(programming_dictionary[key])
+
+# Nesting
+
+capitals = {
+    "France": "Paris",
+    "Germany": "Berlin",
+}
+
+# Nesting a list in a dictionary
+
+travel_log = [
+    {
+        "country": "France",
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 12
+    },
+    {
+        "country": "Germany",
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "total_visits": 5
+    } 
+]
+
