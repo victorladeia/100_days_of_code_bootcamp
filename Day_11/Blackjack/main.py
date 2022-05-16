@@ -64,12 +64,10 @@ import art
 import os
 
 def deal_card(player):
+    """"Return a random card from the deck."""
     player.append(choice(cards))
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-
-user_cards = []
-computer_cards = []
 
 flag1 = 'y'
 
@@ -78,10 +76,33 @@ while( flag1 == 'y' ):
     if ( flag1 == 'y' ):
         os.system("clear")
         print(art.logo)
-        deal_card(user_cards)
-        deal_card(user_cards)
-        deal_card(compute)
-        print(f"\tYour cards: {user_cards}, current score: {sum(user_cards)}")
-        print(f"\tComputer's first card: {computer_cards}")
 
-        other_card = input("Type 'y' to get another card, type 'n' to pass: ")
+        user_cards = []
+        computer_cards = []
+
+        deal_card(user_cards)
+        deal_card(user_cards)
+        deal_card(computer_cards)
+
+        while (sum(computer_cards) <= 17):
+            deal_card(computer_cards)
+
+        if ( sum(user_cards) and len(user_cards) == 2 ):
+            print("You win!")
+
+        else:
+            flag2 = 'y'
+            
+            while(flag2 == 'y'):
+                
+
+                
+
+
+                print(f"Computer cards: {computer_cards}")
+                print(f"\tYour cards: {user_cards}, current score: {sum(user_cards)}")
+                print(f"\tComputer's first card: {computer_cards[0]}")
+
+                other_card = input("Type 'y' to get another card, type 'n' to pass: ")
+
+

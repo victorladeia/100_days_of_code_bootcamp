@@ -13,16 +13,24 @@ deal_card(user_cards)
 deal_card(user_cards)
 
 deal_card(computer_cards)
-deal_card(computer_cards)
+user_score = sum(user_cards)
 
 flag1 = 'y'
-while ( flag1 = 'y' )
-    user_sum = sum(user_cards)
-    computer_sum = sum(computer_cards)
+while ( flag1 == 'y' ):
+    deal_card(user_cards)
+    user_score = sum(user_cards)
+    computer_score = sum(computer_cards)
     
-    if ( user_sum == 21 or computer_sum == 21 ):
-        if ( user_sum == 21 ):
+    if ( user_score == 21 or computer_score == 21 ):
+        if ( user_score == 21 ):
             print("Congratulations! You won!")
-        elif ( computer_sum == 21 ):
+        elif ( computer_score == 21 ):
             print("The computer won...")
-
+    else:
+        if ( user_score > 21 ):
+            if 11 in user_cards:
+                if ( (user_score - 10) > 21 ):
+                    print("The computer won...")
+            else:
+                print("The computer won...")
+    flag1 = input("Do you want another card? 'y' [yes] 'n' [no]: ")
