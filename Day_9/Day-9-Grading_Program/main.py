@@ -18,3 +18,4 @@ for student in student_scores:
     else:
         student_grades[ student ] = "Fail"
 
+print( student_grades )
