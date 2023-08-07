@@ -86,7 +86,7 @@ while keep_on:
         missing_resource = results_from_check_resources[1]
         if is_resources_enough:
             print("Please insert coins.")
-            inserted_value: int = get_coins()
+            inserted_value: float = get_coins()
             change = inserted_value - MENU[user_entry]["cost"]
             if change >= 0:
                 print(f"Here is ${round(change, 2)} in change")
