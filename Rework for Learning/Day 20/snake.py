@@ -1,13 +1,10 @@
 from turtle import Turtle
 
-# setting angles values for set directions on setheading() function
 UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
-
-# Setting starting positions for first 3 snake blocks:
-STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
+STARTING_POSITIONS = [(0,0),(-20,0),(-40,0)]
 
 
 class Snake:
@@ -30,10 +27,17 @@ class Snake:
         self.snake_blocks.append(snake_block)
 
     def extend(self):
+        """"
+
+        """
         self.add_block(self.snake_blocks[-1].position())
 
     def move(self):
+        """
+        @return:
+        Makes the snake goes forward by 20 px in heading direction
 
+        """
         for part_num in range(len(self.snake_blocks) - 1, 0, -1):
             new_x = self.snake_blocks[part_num - 1].xcor()
             new_y = self.snake_blocks[part_num - 1].ycor()

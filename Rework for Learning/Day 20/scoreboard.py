@@ -1,7 +1,6 @@
 from turtle import Turtle
 ALIGNMENT = "center"
-FONT = ('arial', 24, 'normal')
-
+FONT = ('Arial', 24, 'normal')
 
 class Scoreboard(Turtle):
 
